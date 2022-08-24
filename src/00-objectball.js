@@ -297,23 +297,54 @@ let bigShoeRebounds = () => {
         const playerObj = game[gameKey].players
      debugger
         for (const playerKey in playerObj){
-           debugger
+           //debugger
            returnShoeValue.push(playerObj[playerKey].shoe)
-           debugger
+           //debugger
            maxShoe = Math.max(...returnShoeValue)
-           debugger
+           //debugger
            if(playerObj[playerKey].shoe === maxShoe){
             maxShoeRebounds = playerObj[playerKey].rebounds
         }
-        debugger
-        
-            debugger
+        //debugger
+    
         }
             
     }
     return maxShoeRebounds
 
 }
-bigShoeRebounds()
 
-//debugger
+// Define functions to return the answer to the following questions:
+
+// Which player has the most points? Call the function mostPointsScored.
+let mostPointsScored = () => {
+    const game = gameObject()
+    let returnPointValue = []
+    let maxPoints = ''
+    let maxPointsPlayerName = ''
+    for (const gameKey in game){
+        debugger
+        const playerObj = game[gameKey].players
+     debugger
+        for (const playerKey in playerObj){
+           debugger
+           returnPointValue.push(playerObj[playerKey].points)
+           debugger
+           maxPoints = Math.max(...returnPointValue)
+           debugger
+           if(playerObj[playerKey].points === maxPoints){
+            maxPointsPlayerName = playerObj[playerKey]
+        }
+        debugger
+    
+        }
+            
+    }
+    return maxPointsPlayerName
+
+}
+mostPointsScored()
+
+
+// Which team has the most points? Call the function winningTeam.
+// Which player has the longest name? Call the function playerWithLongestName.
